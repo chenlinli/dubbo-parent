@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+##### dubbo的注册中心配置
+dubbo:
+  application:
+  ### 注册名称
+    name: member
+  protocol:
+  ##协议
+    name: dubbo
+    ##端口
+    port: 20881
+    ## 注册中心地址
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    ## 注册的服务@Service扫包范围
+  scan:
+    base-packages: com.cl.api.member.impl
